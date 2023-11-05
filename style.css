@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #0b1522;
+}
+
+.heart {
+    margin-top: 60px;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #f20044;
+    animation: palpitar 0.5s linear infinite alternate;
+}
+
+.uii {
+    position: fixed;
+    margin-bottom: 190px;
+    text-align: center;
+}
+
+h1 {color: white;}
+h2{color: white;}
+
+@keyframes palpitar {
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+.frase {
+    text-align: center;
+    margin-top: 100px;
+    color: #fff;
+    font-size: 1rem;
+}
+p {
+    color: #fff;
+    text-shadow: 0 0 5px #FF4F5B, 0 0 10px #FF4F5B, 0 0 20px #FF4F5B, 0 0 30px #FF4F5B, 0 0 60px #FF4F5B, 0 0 70px #FF4F5B, 0 0 90px #FF4F5B, 0 0 140px #FF4F5B;
+}
+button {
+    background-color: #fa3e4b;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+button:hover {
+    background-color: #f20044;
+    transition: 1s;
+    cursor: pointer;
+}
+
